@@ -21,7 +21,7 @@
             <label for="password">Password</label>
             <input name="password" type="password" class="form-control">
 
-            <button class="btn btn-danger">Register</button>
+            <button class="btn btn-info">Register</button>
             <a href="{{ route('login') }}" class="">Login</a>
         </form>
     </div>

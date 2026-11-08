@@ -11,16 +11,17 @@
 
 <body>
     @include('temp.navbar')
+    <h1 class="mt-5 justify-content-center d-flex align-items-center text-danger">PLUSHIES</h1>
     <div class="container mt-5 justify-content-center d-flex align-items-center">
         <div class="row">
             @foreach ($produk as $p)
                 <div class="col-3 mt-5">
                     <div class="card">
-                        <img src="{{ asset($p->foto) }}" alt="" class="card-img-top">
+                        <img src="{{ asset('storage/' .$p->foto) }}" alt="" class="card-img-top">
                         <div class="card-body">
                             <h4 class="card-title">{{ $p->name }}</h4>
-                            <p class="card-text">Rp. {{ $p->price }}</p>
-                            <a href="" class="btn btn-danger">Detail</a>
+                            <p class="card-text">Rp. {{ number_format($p->price, 0, ',', '.') }}</p>
+                            <a href="{{ route('detailmenu', $p->id) }}" class="btn btn-danger">Detail</a>
                         </div>
                     </div>
                 </div>

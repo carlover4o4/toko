@@ -37,7 +37,7 @@
                         <td>{{ $p->description }}</td>
                         <td>{{ $p->qty }}</td>
                         <td>
-                            <a href="" class="btn btn-warning">Edit</a>
+                            <a href="{{ route('edit', $p->id) }}" class="btn btn-warning">Edit</a>
                             <a href="{{ route('hapus', $p->id) }}" class="btn btn-danger">Delete</a>
                         </td>
                     </tr>

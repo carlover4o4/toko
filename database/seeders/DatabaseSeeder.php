@@ -31,7 +31,11 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Kategori::create([
-            'name' => 'plush',
+            'name' => 'Normal Plush',
+        ]);
+
+        Kategori::create([
+            'name' => 'Special Plush',
         ]);
 
         Produk::create([
@@ -116,7 +120,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Produk::create([
-            'kategori_id' => 1,
+            'kategori_id' => 2,
             'foto' => 'img/Sleepy Bear Plushie.jpg',
             'name' => 'Sleepy Bear Plushie',
             'price' => 200000,
